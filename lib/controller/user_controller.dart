@@ -19,6 +19,14 @@ class UserController extends GetxController {
 
   // Userslis
 
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+    getUserList();
+    fetchMoreUserList();
+  }
+
   void getUserList() async {
     fetchLoadingStatus = ApiStatus.loading;
     update();
